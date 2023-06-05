@@ -6,3 +6,95 @@
     box-sizing: border-box;
     font-family: 'Poppins', consolas;
 }
+:root {
+    --clr: #0ab3ff;
+    --white: #fff;
+    --bg: #000;
+    --form-bg: #222;
+    --in-border: 2px solid#999;
+    --in-label: #999;
+  
+}
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: var(--bg);
+   
+}
+form {
+    background: var(--form-bg);
+    padding: 60px 80px 60px;
+    text-align: center;
+    flex-direction: column;
+    border-radius: 10px;
+    border-color: 2px solid var(--clr);
+    box-shadow: 0 0 20px var(--clr);
+    
+}
+form h2 {
+    font-weight: 500;
+    text-transform: uppercase;
+    font-size: 1.25em;
+    padding-bottom: 50px;
+    letter-spacing: 0.1em;
+    color: var(--clr);
+}
+.inputBox {
+    position: relative;
+    width: 300px;
+    margin-bottom: 40px;
+}
+.inputBox input {
+    width: 100%;
+    position: relative;
+    padding: 10px 0;
+    background: transparent;
+    border: none;
+    border-bottom: var(--in-border);
+    outline: none;
+    color: var(--white);
+    font-size: 1em;
+    text-transform: capitalize;
+    letter-spacing: 0.15em;
+}
+.inputBox label {
+    position: absolute;
+    left: 0;
+    padding: 10px 0;
+    pointer-events: none;
+    color: var(--in-label);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
+.inputBox input:focus,
+.inputBox input:valid {
+    border-bottom: 2px solid var(--clr);
+
+}
+.inputBox input[type="submit"] {
+    background: var(--clr);
+    border: none;
+    padding: 15px;
+    border-radius: 50px;
+    color: var(--bg);
+    font-weight: 600;
+    font-size: 1.15em;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    cursor: pointer;
+    transition: 0.5s;
+    box-shadow: 0 0 20px var(--bg);
+}
+.inputBox input[type="submit"]:hover {
+    letter-spacing: 0.35em;
+}
+form p {
+    color: var(--in-label);
+}
+form p a {
+    color: var(--clr);
+    font-weight: 500;
+    text-decoration: none;
+}
